@@ -1,0 +1,625 @@
+kansala@ubuntu:~/BUILD/SampleApp/src$ gdb -w --args SampleApp ./../../Integration/AlexaClientSDKConfig.json  $LOCAL_BUILD/models DEBUG9 
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from SampleApp...done.
+(gdb) help
+List of classes of commands:
+
+aliases -- Aliases of other commands
+breakpoints -- Making program stop at certain points
+data -- Examining data
+files -- Specifying and examining files
+internals -- Maintenance commands
+obscure -- Obscure features
+running -- Running the program
+stack -- Examining the stack
+status -- Status inquiries
+support -- Support facilities
+tracepoints -- Tracing of program execution without stopping the program
+user-defined -- User-defined commands
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) files
+Undefined command: "files".  Try "help".
+(gdb) help files
+Specifying and examining files.
+
+List of commands:
+
+add-symbol-file -- Load symbols from FILE
+add-symbol-file-from-memory -- Load the symbols out of memory from a dynamically loaded object file
+cd -- Set working directory to DIR for debugger and program being debugged
+core-file -- Use FILE as core dump for examining memory and registers
+directory -- Add directory DIR to beginning of search path for source files
+edit -- Edit specified file or function
+exec-file -- Use FILE as program for getting contents of pure memory
+file -- Use FILE as program to be debugged
+forward-search -- Search for regular expression (see regex(3)) from last line listed
+generate-core-file -- Save a core file with the current state of the debugged process
+list -- List specified function or line
+load -- Dynamically load FILE into the running program
+nosharedlibrary -- Unload all shared object library symbols
+path -- Add directory DIR(s) to beginning of search path for object files
+pwd -- Print working directory
+remote -- Manipulate files on the remote system
+remote delete -- Delete a remote file
+remote get -- Copy a remote file to the local system
+remote put -- Copy a local file to the remote system
+remove-symbol-file -- Remove a symbol file added via the add-symbol-file command
+reverse-search -- Search backward for regular expression (see regex(3)) from last line listed
+search -- Search for regular expression (see regex(3)) from last line listed
+section -- Change the base address of section SECTION of the exec file to ADDR
+sharedlibrary -- Load shared object library symbols for files matching REGEXP
+symbol-file -- Load symbol table from executable file FILE
+
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) help
+List of classes of commands:
+
+aliases -- Aliases of other commands
+breakpoints -- Making program stop at certain points
+data -- Examining data
+files -- Specifying and examining files
+internals -- Maintenance commands
+obscure -- Obscure features
+running -- Running the program
+stack -- Examining the stack
+status -- Status inquiries
+support -- Support facilities
+tracepoints -- Tracing of program execution without stopping the program
+user-defined -- User-defined commands
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) help tracepoints
+Tracing of program execution without stopping the program.
+
+List of commands:
+
+actions -- Specify the actions to be taken at a tracepoint
+collect -- Specify one or more data items to be collected at a tracepoint
+end -- Ends a list of commands or actions
+passcount -- Set the passcount for a tracepoint
+save-tracepoints -- Save current tracepoint definitions as a script
+tdump -- Print everything collected at the current tracepoint
+teval -- Specify one or more expressions to be evaluated at a tracepoint
+tfind -- Select a trace frame;
+tfind end -- De-select any trace frame and resume 'live' debugging
+tfind line -- Select a trace frame by source line
+tfind none -- De-select any trace frame and resume 'live' debugging
+tfind outside -- Select a trace frame whose PC is outside the given range (exclusive)
+tfind pc -- Select a trace frame by PC
+tfind range -- Select a trace frame whose PC is in the given range (inclusive)
+tfind start -- Select the first trace frame in the trace buffer
+tfind tracepoint -- Select a trace frame by tracepoint number
+tsave -- Save the trace data to a file
+tstart -- Start trace data collection
+tstatus -- Display the status of the current trace data collection
+tstop -- Stop trace data collection
+tvariable -- Define a trace state variable
+while-stepping -- Specify single-stepping behavior at a tracepoint
+
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) help
+List of classes of commands:
+
+aliases -- Aliases of other commands
+breakpoints -- Making program stop at certain points
+data -- Examining data
+files -- Specifying and examining files
+internals -- Maintenance commands
+obscure -- Obscure features
+running -- Running the program
+stack -- Examining the stack
+status -- Status inquiries
+support -- Support facilities
+tracepoints -- Tracing of program execution without stopping the program
+user-defined -- User-defined commands
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) r
+Starting program: /home/kansala/BUILD/SampleApp/src/SampleApp ./../../Integration/AlexaClientSDKConfig.json /home/kansala/local-builds/models DEBUG9
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Running app with log level: DEBUG9
+2017-09-28 02:33:27.526 [  1] I ConfigurationNode:initializeSuccess
+2017-09-28 02:33:27.527 [  1] 9 MediaPlayer:createCalled
+[New Thread 0x7ffff18f0700 (LWP 29648)]
+2017-09-28 02:33:27.535 [  1] 9 MediaPlayer:createCalled
+[New Thread 0x7ffff10ef700 (LWP 29649)]
+2017-09-28 02:33:27.535 [  1] 9 MediaPlayer:createCalled
+[New Thread 0x7ffff08ee700 (LWP 29650)]
+[New Thread 0x7fffe3fff700 (LWP 29651)]
+[New Thread 0x7fffe37fe700 (LWP 29652)]
+[New Thread 0x7fffe2ffd700 (LWP 29653)]
+[New Thread 0x7fffe27fc700 (LWP 29654)]
+[New Thread 0x7fffe1de9700 (LWP 29655)]
+[New Thread 0x7fffe13e5700 (LWP 29656)]
+[New Thread 0x7fffe0be4700 (LWP 29657)]
+[New Thread 0x7fffdbde4700 (LWP 29658)]
+[New Thread 0x7fffdb5e3700 (LWP 29659)]
+[New Thread 0x7fffdade2700 (LWP 29660)]
+[New Thread 0x7fffda5e1700 (LWP 29661)]
+2017-09-28 02:33:27.555 [  1] 9 MediaPlayer:setObserverCalled
+2017-09-28 02:33:27.555 [  2] 0 MediaPlayer:handleSetObserverCalled
+2017-09-28 02:33:27.555 [  1] 9 SpeechSynthesizer:addObserver:observer=0x91a428
+[New Thread 0x7fffd9de0700 (LWP 29662)]
+2017-09-28 02:33:27.558 [  1] 9 MediaPlayer:setObserverCalled
+2017-09-28 02:33:27.558 [  2] 0 MediaPlayer:handleSetObserverCalled
+[New Thread 0x7fffd95df700 (LWP 29663)]
+2017-09-28 02:33:27.558 [  1] 9 MediaPlayer:setObserverCalled
+2017-09-28 02:33:27.558 [  2] 0 MediaPlayer:handleSetObserverCalled
+[New Thread 0x7fffd8dde700 (LWP 29664)]
+[New Thread 0x7fffc7fff700 (LWP 29665)]
+2017-09-28 02:33:27.562 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=SpeechSynthesizer,name=Speak,handler=0x91e730,policy=BLOCKING
+2017-09-28 02:33:27.563 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=AudioPlayer,name=ClearQueue,handler=0x91f260,policy=NON_BLOCKING
+2017-09-28 02:33:27.563 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=AudioPlayer,name=Stop,handler=0x91f260,policy=NON_BLOCKING
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=AudioPlayer,name=Play,handler=0x91f260,policy=NON_BLOCKING
+[New Thread 0x7fffc77fe700 (LWP 29666)]
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=SpeechRecognizer,name=ExpectSpeech,handler=0x91d680,policy=NON_BLOCKING
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=SpeechRecognizer,name=StopCapture,handler=0x91d680,policy=NON_BLOCKING
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=Alerts,name=DeleteAlert,handler=0x920290,policy=NON_BLOCKING
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=Alerts,name=SetAlert,handler=0x920290,policy=NON_BLOCKING
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=System,name=SetEndpoint,handler=0x925010,policy=NON_BLOCKING
+2017-09-28 02:33:27.564 [  1] I DirectiveRouter:addDirectiveHandlers:action=added,namespace=System,name=ResetUserInactivity,handler=0x91d3a8,policy=NON_BLOCKING
+2017-09-28 02:33:28.117 [  3] 0 HttpPost:doPostSucceeded:code=200
+2017-09-28 02:33:28.117 [  3] 0 AuthDelegate:handleLwaResponseSucceeded:expiresInSeconds=3600
+2017-09-28 02:33:28.118 [  3] 0 AuthDelegate:onAuthStateChangeCalled:state=1,error=0
+2017-09-28 02:33:28.118 [  1] 0 MessageRouter:connectionStatusChanged:reason=ACL_CLIENT_REQUEST,newStatus=PENDING
+[New Thread 0x7fffc6ffd700 (LWP 29667)]
+#############################
+#       Connecting...       #
+#############################
+2017-09-28 02:33:28.581 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-1
+2017-09-28 02:33:28.581 [  4] 0 MessageRouter:connectionStatusChanged:reason=ACL_CLIENT_REQUEST,newStatus=CONNECTED
+2017-09-28 02:33:28.582 [  5] I StateSynchronizer:requestingContext:reason=connectionStatusChanged,receivedStatus=CONNECTED
+##################################################
+#       Performing post connect actions...       #
+##################################################
+2017-09-28 02:33:28.582 [  6] 9 SpeechSynthesizer:provideState:token=1
+2017-09-28 02:33:28.582 [  7] 0 SpeechSynthesizer:executeProvideState:stateRequestToken=1
+2017-09-28 02:33:28.582 [  8] 0 AudioPlayer:executeProvideState:sendToken=true,stateRequestToken=1
+2017-09-28 02:33:28.582 [  7] 0 ContextManager:updateStateLocked:action=updatedState,state={"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"},namespace=SpeechSynthesizer,name=SpeechState
+2017-09-28 02:33:28.583 [  9] 0 ContextManager:updateStateLocked:action=updatedState,state={"wakeword" \: ""},namespace=SpeechRecognizer,name=RecognizerState
+2017-09-28 02:33:28.583 [  8] 0 ContextManager:updateStateLocked:action=updatedState,state={"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"IDLE"},namespace=AudioPlayer,name=PlaybackState
+2017-09-28 02:33:28.583 [  6] 0 ContextManager:buildContextSuccessful:context={"context"\:[{"header"\:{"namespace"\:"Alerts"\,"name"\:"AlertsState"}\,"payload"\:{"allAlerts"\:[{"token"\:"amzn1.as-ct.v1.Domain\:Application\:Notifications#DNID#1ef6c0ad-5a6f-3ecd-bdf3-43a4e77bb1fe"\,"type"\:"ALARM"\,"scheduledTime"\:"2017-09-28T01\:50\:00+0000"}]\,"activeAlerts"\:[]}}\,{"header"\:{"namespace"\:"SpeechSynthesizer"\,"name"\:"SpeechState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"}}\,{"header"\:{"namespace"\:"AudioPlayer"\,"name"\:"PlaybackState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"IDLE"}}\,{"header"\:{"namespace"\:"SpeechRecognizer"\,"name"\:"RecognizerState"}\,"payload"\:{"wakeword"\:""}}]}
+2017-09-28 02:33:28.583 [  6] 0 EventBuilder:buildJsonEventString:messageId=e68c939d-9db0-4a90-90cc-c9c9514c5fb7,namespace=System,name=SynchronizeState
+2017-09-28 02:33:29.977 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-3
+2017-09-28 02:33:29.978 [  4] I StateSynchronizer:messageSentSuccessfully
+########################################
+#       Alexa is currently idle!       #
+########################################
+2017-09-28 02:33:29.990 [  4] 0 CurlEasyHandleWrapper:reset:responseCode=HTTP_RESPONSE_SUCCESS_NO_CONTENT
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.surround71
+ALSA lib setup.c:548:(add_elem) Cannot obtain info for CTL elem (MIXER,'IEC958 Playback Default',0,0,0): No such file or directory
+ALSA lib setup.c:548:(add_elem) Cannot obtain info for CTL elem (MIXER,'IEC958 Playback Default',0,0,0): No such file or directory
+ALSA lib setup.c:548:(add_elem) Cannot obtain info for CTL elem (MIXER,'IEC958 Playback Default',0,0,0): No such file or directory
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2266:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+[New Thread 0x7fffa39bf700 (LWP 29696)]
+[Thread 0x7fffa39bf700 (LWP 29696) exited]
+[New Thread 0x7fffa39bf700 (LWP 29697)]
+[Thread 0x7fffa39bf700 (LWP 29697) exited]
+[New Thread 0x7fffa39bf700 (LWP 29704)]
+[Thread 0x7fffa39bf700 (LWP 29704) exited]
+[New Thread 0x7fffa39bf700 (LWP 29705)]
+[Thread 0x7fffa39bf700 (LWP 29705) exited]
+[New Thread 0x7fffa39bf700 (LWP 29706)]
+2017-09-28 02:33:34.047 [  1] I SensoryKeywordDetector:License expires on 01 Apr 2018 00:00:00 GMT
+2017-09-28 02:33:34.047 [  1] I SensoryKeywordDetector:Sensory library license does not expire for at least 60 more days.
+[New Thread 0x7fffa31be700 (LWP 29707)]
+[New Thread 0x7fffa29bd700 (LWP 29708)]
+[New Thread 0x7fffa21bc700 (LWP 29709)]
+                  #    #     #  #####      #####  ######  #    #              
+                 # #   #     # #     #    #     # #     # #   #               
+                #   #  #     # #          #       #     # #  #                
+               #     # #     #  #####      #####  #     # ###                 
+               #######  #   #        #          # #     # #  #                
+               #     #   # #   #     #    #     # #     # #   #               
+               #     #    #     #####      #####  ######  #    #              
+                                                                              
+       #####                                           #                      
+      #     #   ##   #    # #####  #      ######      # #   #####  #####      
+      #        #  #  ##  ## #    # #      #          #   #  #    # #    #     
+       #####  #    # # ## # #    # #      #####     #     # #    # #    #     
+            # ###### #    # #####  #      #         ####### #####  #####      
+      #     # #    # #    # #      #      #         #     # #      #          
+       #####  #    # #    # #      ###### ######    #     # #      #          
+
++----------------------------------------------------------------------------+
+|                                  Options:                                  |
+| Wake word:                                                                 |
+|       Simply say Alexa and begin your query.                               |
+| Tap to talk:                                                               |
+|       Press 't' and Enter followed by your query (no need for the 'Alexa').|
+| Hold to talk:                                                              |
+|       Press 'h' followed by Enter to simulate holding a button.            |
+|       Then say your query (no need for the 'Alexa').                       |
+|       Press 'h' followed by Enter to simulate releasing a button.          |
+| Stop an interaction:                                                       |
+|       Press 's' and Enter to stop an ongoing interaction.                  |
+| Privacy mode (microphone off):                                             |
+|       Press 'm' and Enter to turn on and off the microphone.               |
+| Info:                                                                      |
+|       Press 'i' followed by Enter at any time to see the help screen.      |
+| Quit:                                                                      |
+|       Press 'q' followed by Enter at any time to quit the application.     |
++----------------------------------------------------------------------------+
+
+2017-09-28 02:33:37.307 [  9] 0 AudioInputProcessor:setState:from=IDLE,to=RECOGNIZING
+2017-09-28 02:33:37.307 [  9] 0 ContextManager:updateStateLocked:action=updatedState,state={"wakeword" \: "alexa"},namespace=SpeechRecognizer,name=RecognizerState
+2017-09-28 02:33:37.308 [  6] 0 ContextManager:buildContextSuccessful:context={"context"\:[{"header"\:{"namespace"\:"Alerts"\,"name"\:"AlertsState"}\,"payload"\:{"allAlerts"\:[{"token"\:"amzn1.as-ct.v1.Domain\:Application\:Notifications#DNID#1ef6c0ad-5a6f-3ecd-bdf3-43a4e77bb1fe"\,"type"\:"ALARM"\,"scheduledTime"\:"2017-09-28T01\:50\:00+0000"}]\,"activeAlerts"\:[]}}\,{"header"\:{"namespace"\:"SpeechSynthesizer"\,"name"\:"SpeechState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"}}\,{"header"\:{"namespace"\:"AudioPlayer"\,"name"\:"PlaybackState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"IDLE"}}\,{"header"\:{"namespace"\:"SpeechRecognizer"\,"name"\:"RecognizerState"}\,"payload"\:{"wakeword"\:"alexa"}}]}
+2017-09-28 02:33:37.307 [  a] 0 DialogUXStateAggregator:setState:from=IDLE,to=LISTENING
+############################
+#       Listening...       #
+############################
+2017-09-28 02:33:37.308 [  9] 0 AudioInputProcessor:executeOnContextAvailable:jsonContext={"context"\:[{"header"\:{"namespace"\:"Alerts"\,"name"\:"AlertsState"}\,"payload"\:{"allAlerts"\:[{"token"\:"amzn1.as-ct.v1.Domain\:Application\:Notifications#DNID#1ef6c0ad-5a6f-3ecd-bdf3-43a4e77bb1fe"\,"type"\:"ALARM"\,"scheduledTime"\:"2017-09-28T01\:50\:00+0000"}]\,"activeAlerts"\:[]}}\,{"header"\:{"namespace"\:"SpeechSynthesizer"\,"name"\:"SpeechState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"}}\,{"header"\:{"namespace"\:"AudioPlayer"\,"name"\:"PlaybackState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"IDLE"}}\,{"header"\:{"namespace"\:"SpeechRecognizer"\,"name"\:"RecognizerState"}\,"payload"\:{"wakeword"\:"alexa"}}]}
+2017-09-28 02:33:37.308 [  9] I DirectiveProcessor:setDialogRequestIdLocked:oldValue=,newValue=3e23d7c7-e4db-4f71-83e0-82859d79089f
+2017-09-28 02:33:37.308 [  9] 0 DirectiveProcessor:scrubDialogRequestIdLocked:reason=emptyDialogRequestId
+2017-09-28 02:33:37.308 [  9] 0 EventBuilder:buildJsonEventString:messageId=4567df42-20cb-4244-960a-b892a6b12909,namespace=SpeechRecognizer,name=Recognize
+2017-09-28 02:33:37.309 [  9] 0 AudioInputProcessor:executeOnFocusChanged:newFocus=FOREGROUND
+2017-09-28 02:33:39.133 [  5] 0 MessageInterpreter:receive:messageId=c1c7891c-db8a-40b8-86b6-4514f212339a:No dialogRequestId attached to message.
+2017-09-28 02:33:39.133 [  5] I DirectiveSequencer:onDirective:directive={"namespace\:"SpeechRecognizer"\,name\:"StopCapture"\,messageId\:"c1c7891c-db8a-40b8-86b6-4514f212339a"\,dialogRequestId\:""}
+2017-09-28 02:33:39.133 [  b] I DirectiveRouter:preHandleDirective:messageId=c1c7891c-db8a-40b8-86b6-4514f212339a,action=calling
+2017-09-28 02:33:39.133 [  b] 0 CapabilityAgent:addingMessageIdToMap:messageId=c1c7891c-db8a-40b8-86b6-4514f212339a
+2017-09-28 02:33:39.133 [  c] I DirectiveRouter:handleDirective:messageId=c1c7891c-db8a-40b8-86b6-4514f212339a,action=calling
+2017-09-28 02:33:39.134 [  9] 0 AudioInputProcessor:stopCapture:stopImmediately=true
+2017-09-28 02:33:39.134 [  9] 0 AudioInputProcessor:setState:from=RECOGNIZING,to=BUSY
+2017-09-28 02:33:39.134 [  9] 0 DirectiveProcessor:onHandlingCompeted:messageId=c1c7891c-db8a-40b8-86b6-4514f212339a,directiveBeingPreHandled=(nullptr)
+2017-09-28 02:33:39.134 [  9] 0 CapabilityAgent:removingMessageIdFromMap:messageId=c1c7891c-db8a-40b8-86b6-4514f212339a
+2017-09-28 02:33:39.134 [  a] 0 DialogUXStateAggregator:setState:from=LISTENING,to=THINKING
+###########################
+#       Thinking...       #
+###########################
+[New Thread 0x7fffa19bb700 (LWP 29727)]
+2017-09-28 02:33:39.144 [  4] I InProcessAttachmentReader:readFailed:reason=SDS is closed
+2017-09-28 02:33:39.808 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-5
+2017-09-28 02:33:39.901 [  5] I DirectiveSequencer:onDirective:directive={"namespace\:"Speaker"\,name\:"SetMute"\,messageId\:"c96f6fc1-f130-4387-ab0b-e602cd9398fb"\,dialogRequestId\:"3e23d7c7-e4db-4f71-83e0-82859d79089f"}
+2017-09-28 02:33:39.901 [  b] W DirectiveRouter:preHandleDirectiveFailed:messageId=c96f6fc1-f130-4387-ab0b-e602cd9398fb,reason=noHandlerRegistered
+2017-09-28 02:33:39.901 [  b] I DirectiveSequencer:sendingExceptionEncountered:messageId=c96f6fc1-f130-4387-ab0b-e602cd9398fb
+2017-09-28 02:33:39.901 [  b] 0 EventBuilder:buildJsonEventString:messageId=5d0e10bb-7d4b-49d9-8411-55ed9237a059,namespace=System,name=ExceptionEncountered
+[Thread 0x7fffa19bb700 (LWP 29727) exited]
+[New Thread 0x7fffa19bb700 (LWP 29731)]
+2017-09-28 02:33:39.901 [  5] I DirectiveSequencer:onDirective:directive={"namespace\:"SpeechSynthesizer"\,name\:"Speak"\,messageId\:"5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b"\,dialogRequestId\:"3e23d7c7-e4db-4f71-83e0-82859d79089f"}
+2017-09-28 02:33:39.901 [  b] I DirectiveRouter:preHandleDirective:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b,action=calling
+2017-09-28 02:33:39.901 [  b] 0 CapabilityAgent:addingMessageIdToMap:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+2017-09-28 02:33:39.901 [  b] 9 SpeechSynthesizer:preHandleDirective:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+[Thread 0x7fffa19bb700 (LWP 29731) exited]
+2017-09-28 02:33:39.901 [  7] 0 SpeechSynthesizer:executePreHandle:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+2017-09-28 02:33:39.901 [  c] I DirectiveRouter:handleDirective:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b,action=calling
+2017-09-28 02:33:39.902 [  c] 9 SpeechSynthesizer:handleDirective:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+[New Thread 0x7fffa19bb700 (LWP 29732)]
+2017-09-28 02:33:39.903 [  7] 0 SpeechSynthesizer:executeHandle:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+2017-09-28 02:33:39.903 [  d] 0 SpeechSynthesizer:onFocusChanged:newFocus=FOREGROUND
+2017-09-28 02:33:39.903 [  9] 0 AudioInputProcessor:executeOnFocusChanged:newFocus=NONE
+2017-09-28 02:33:39.903 [  9] 0 AudioInputProcessor:executeOnFocusChanged:reason=Lost focus
+2017-09-28 02:33:39.903 [  7] 0 SpeechSynthesizer:executeStateChange:newState=PLAYING
+2017-09-28 02:33:39.903 [  9] 0 AudioInputProcessor:setState:from=BUSY,to=IDLE
+2017-09-28 02:33:39.903 [  7] 9 SpeechSynthesizer:startPlaying
+2017-09-28 02:33:39.903 [  7] 9 MediaPlayer:setSourceCalled:sourceType=AttachmentReader
+2017-09-28 02:33:39.904 [  2] 0 MediaPlayer:handleSetSourceCalled
+2017-09-28 02:33:39.904 [  2] 9 MediaPlayer:tearDownPipeline
+2017-09-28 02:33:39.969 [  7] 9 MediaPlayer:playCalled
+2017-09-28 02:33:39.969 [  2] 0 MediaPlayer:handlePlayCalled
+2017-09-28 02:33:39.969 [  2] 0 MediaPlayer:doStopSuccess:reason=alreadyStopped
+2017-09-28 02:33:39.969 [  2] 9 MediaPlayer:doStopSuccess
+2017-09-28 02:33:39.969 [  2] 0 MediaPlayer:handlePlay:supportsBuffering=0
+[New Thread 0x7fff97933700 (LWP 29733)]
+[New Thread 0x7fff93131700 (LWP 29734)]
+2017-09-28 02:33:39.979 [  2] 0 MediaPlayer:handlePlay:stateReturn=ASYNC
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.979 [  e] 9 BaseStreamSource:onNeedDataCalled:size=4096
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.979 [  2] 9 MediaPlayer:State Change:oldState=NULL,newState=READY,pendingState=PLAYING
+2017-09-28 02:33:39.980 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.980 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.980 [  2] 9 MediaPlayer:messageReceived:messageType=stream-status
+2017-09-28 02:33:39.980 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.980 [  2] 9 MediaPlayer:messageReceived:messageType=stream-status
+2017-09-28 02:33:39.980 [  2] 9 BaseStreamSource:handleNeedDataCalled
+2017-09-28 02:33:39.980 [  2] 9 BaseStreamSource:installOnReadDataHandler:action=newSourceId,sourceId=8
+2017-09-28 02:33:39.980 [  2] 9 AttachmentReaderSource:read:size=4096,status=0
+2017-09-28 02:33:39.980 [  2] 9 AttachmentReaderSource:read:size=4096,status=0
+2017-09-28 02:33:39.980 [  2] 9 AttachmentReaderSource:read:size=1213,status=0
+2017-09-28 02:33:39.980 [  2] I InProcessAttachmentReader:readFailed:reason=SDS is closed
+2017-09-28 02:33:39.980 [  2] 9 AttachmentReaderSource:read:size=0,status=3
+2017-09-28 02:33:39.981 [  2] 9 BaseStreamSource:signalEndOfDataCalled
+2017-09-28 02:33:39.981 [  2] 9 BaseStreamSource:clearOnReadDataHandlerCalled:sourceId=8
+2017-09-28 02:33:39.991 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.991 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.995 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-7
+2017-09-28 02:33:39.995 [  4] 0 CurlEasyHandleWrapper:reset:responseCode=HTTP_RESPONSE_SUCCESS_NO_CONTENT
+2017-09-28 02:33:39.997 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:39.997 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:40.337 [  a] 0 DialogUXStateAggregator:transitionFromThinkingTimedOut
+2017-09-28 02:33:40.337 [  a] 0 DialogUXStateAggregator:setState:from=THINKING,to=IDLE
+########################################
+#       Alexa is currently idle!       #
+########################################
+[Thread 0x7fffa19bb700 (LWP 29732) exited]
+2017-09-28 02:33:40.342 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:40.342 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:40.343 [  e] 9 MediaPlayer:onPadAddedCalled
+2017-09-28 02:33:40.343 [  2] 9 MediaPlayer:handlePadAddedSignalCalled
+2017-09-28 02:33:40.348 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:40.348 [  2] 9 MediaPlayer:messageReceived:messageType=stream-start
+2017-09-28 02:33:41.348 [  f] I AbstractKeywordDetector:readFromStreamFailed:reason=readerTimeOut
+2017-09-28 02:33:42.348 [  f] I AbstractKeywordDetector:readFromStreamFailed:reason=readerTimeOut
+2017-09-28 02:33:42.394 [  d] E SpeechSynthesizer:onFocusChangeFailed:reason=stateChangeTimeout,messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+2017-09-28 02:33:42.394 [  d] 0 EventBuilder:buildJsonEventString:messageId=cc7001da-8994-4b8f-8e0b-ba4fcf223b1f,namespace=System,name=ExceptionEncountered
+2017-09-28 02:33:42.395 [  d] 0 DirectiveProcessor:onHandlingFailed:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b,directiveBeingPreHandled=(nullptr),description=stateChangeTimeout
+2017-09-28 02:33:42.395 [  d] 0 DirectiveProcessor:scrubDialogRequestIdLocked:dialogRequestId=3e23d7c7-e4db-4f71-83e0-82859d79089f
+2017-09-28 02:33:42.395 [  d] 0 CapabilityAgent:removingMessageIdFromMap:messageId=5d4cea9a-de5e-470a-97d9-e9f2d9a37f6b
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=latency
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=tag
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=tag
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:State Change:oldState=READY,newState=PAUSED,pendingState=PLAYING
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=async-done
+[New Thread 0x7fffa19bb700 (LWP 29741)]
+2017-09-28 02:33:42.396 [  2] 9 MediaPlayer:messageReceived:messageType=new-clock
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.397 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.398 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.398 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:42.398 [  2] 9 MediaPlayer:State Change:oldState=PAUSED,newState=PLAYING,pendingState=VOID_PENDING
+2017-09-28 02:33:42.398 [  2] 0 MediaPlayer:callingOnPlaybackStarted
+2017-09-28 02:33:42.398 [  2] 9 SpeechSynthesizer:onPlaybackStarted
+2017-09-28 02:33:42.398 [  7] 0 SpeechSynthesizer:executePlaybackStarted
+2017-09-28 02:33:42.398 [  7] 0 SpeechSynthesizer:executeProvideState:stateRequestToken=0
+2017-09-28 02:33:42.398 [  7] 9 MediaPlayer:getOffsetInMillisecondsCalled
+2017-09-28 02:33:42.398 [  2] 0 MediaPlayer:handleGetOffsetInMillisecondsCalled
+2017-09-28 02:33:42.399 [  7] 0 ContextManager:updateStateLocked:action=updatedState,state={"token"\:""\,"offsetInMilliseconds"\:1\,"playerActivity"\:"PLAYING"},namespace=SpeechSynthesizer,name=SpeechState
+2017-09-28 02:33:42.399 [  7] 0 EventBuilder:buildJsonEventString:messageId=129ed5f3-0ffc-463c-90f2-70b72d97bd28,namespace=SpeechSynthesizer,name=SpeechStarted
+2017-09-28 02:33:42.399 [  a] 0 DialogUXStateAggregator:setState:from=IDLE,to=SPEAKING
+###########################
+#       Speaking...       #
+###########################
+2017-09-28 02:33:42.415 [  2] 9 MediaPlayer:messageReceived:messageType=tag
+2017-09-28 02:33:42.571 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-9
+2017-09-28 02:33:42.572 [  4] 0 CurlEasyHandleWrapper:reset:responseCode=HTTP_RESPONSE_SUCCESS_NO_CONTENT
+2017-09-28 02:33:42.878 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-11
+2017-09-28 02:33:43.744 [  e] 9 BaseStreamSource:onNeedDataCalled:size=4096
+2017-09-28 02:33:43.744 [  2] 9 BaseStreamSource:handleNeedDataCalled
+2017-09-28 02:33:43.905 [  2] 9 MediaPlayer:messageReceived:messageType=eos
+2017-09-28 02:33:43.905 [  2] 9 BaseStreamSource:~BaseStreamSource
+2017-09-28 02:33:43.905 [  2] 0 MediaPlayer:callingOnPlaybackFinished
+2017-09-28 02:33:43.905 [  2] 9 SpeechSynthesizer:onPlaybackFinished
+2017-09-28 02:33:43.905 [  2] 9 MediaPlayer:tearDownPipeline
+2017-09-28 02:33:43.905 [  7] 0 SpeechSynthesizer:executePlaybackFinished
+2017-09-28 02:33:43.907 [  7] 0 SpeechSynthesizer:executeProvideState:stateRequestToken=0
+2017-09-28 02:33:43.908 [  7] 0 ContextManager:updateStateLocked:action=updatedState,state={"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"},namespace=SpeechSynthesizer,name=SpeechState
+2017-09-28 02:33:43.908 [  7] 9 SpeechSynthesizer:releaseForegroundFocus
+2017-09-28 02:33:43.908 [  d] 0 SpeechSynthesizer:onFocusChanged:newFocus=NONE
+[New Thread 0x7fff90b58700 (LWP 29748)]
+[Thread 0x7fff97933700 (LWP 29733) exited]
+2017-09-28 02:33:43.909 [  2] 9 MediaPlayer:doStopSuccess
+2017-09-28 02:33:43.909 [  2] 9 MediaPlayer:resetPipeline
+2017-09-28 02:33:44.110 [  a] 0 DialogUXStateAggregator:setState:from=FINISHED,to=IDLE
+########################################
+#       Alexa is currently idle!       #
+########################################
+[Thread 0x7fff90b58700 (LWP 29748) exited]
+[Thread 0x7fff93131700 (LWP 29734) exited]
+2017-09-28 02:33:48.704 [  9] 0 AudioInputProcessor:setState:from=IDLE,to=RECOGNIZING
+2017-09-28 02:33:48.704 [  a] 0 DialogUXStateAggregator:setState:from=IDLE,to=LISTENING
+############################
+#       Listening...       #
+############################
+2017-09-28 02:33:48.704 [  6] 0 ContextManager:buildContextSuccessful:context={"context"\:[{"header"\:{"namespace"\:"Alerts"\,"name"\:"AlertsState"}\,"payload"\:{"allAlerts"\:[{"token"\:"amzn1.as-ct.v1.Domain\:Application\:Notifications#DNID#1ef6c0ad-5a6f-3ecd-bdf3-43a4e77bb1fe"\,"type"\:"ALARM"\,"scheduledTime"\:"2017-09-28T01\:50\:00+0000"}]\,"activeAlerts"\:[]}}\,{"header"\:{"namespace"\:"SpeechSynthesizer"\,"name"\:"SpeechState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"}}\,{"header"\:{"namespace"\:"AudioPlayer"\,"name"\:"PlaybackState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"IDLE"}}\,{"header"\:{"namespace"\:"SpeechRecognizer"\,"name"\:"RecognizerState"}\,"payload"\:{"wakeword"\:"alexa"}}]}
+2017-09-28 02:33:48.704 [  9] 0 AudioInputProcessor:executeOnContextAvailable:jsonContext={"context"\:[{"header"\:{"namespace"\:"Alerts"\,"name"\:"AlertsState"}\,"payload"\:{"allAlerts"\:[{"token"\:"amzn1.as-ct.v1.Domain\:Application\:Notifications#DNID#1ef6c0ad-5a6f-3ecd-bdf3-43a4e77bb1fe"\,"type"\:"ALARM"\,"scheduledTime"\:"2017-09-28T01\:50\:00+0000"}]\,"activeAlerts"\:[]}}\,{"header"\:{"namespace"\:"SpeechSynthesizer"\,"name"\:"SpeechState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"}}\,{"header"\:{"namespace"\:"AudioPlayer"\,"name"\:"PlaybackState"}\,"payload"\:{"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"IDLE"}}\,{"header"\:{"namespace"\:"SpeechRecognizer"\,"name"\:"RecognizerState"}\,"payload"\:{"wakeword"\:"alexa"}}]}
+2017-09-28 02:33:48.704 [  9] I DirectiveProcessor:setDialogRequestIdLocked:oldValue=,newValue=17f1b945-d38e-4a88-a3bd-d684ed9e4176
+2017-09-28 02:33:48.704 [  9] 0 DirectiveProcessor:scrubDialogRequestIdLocked:reason=emptyDialogRequestId
+2017-09-28 02:33:48.704 [  9] 0 EventBuilder:buildJsonEventString:messageId=62f9f874-1bbe-4aa7-9a8b-3a5a08ba7941,namespace=SpeechRecognizer,name=Recognize
+2017-09-28 02:33:48.704 [  9] 0 AudioInputProcessor:executeOnFocusChanged:newFocus=FOREGROUND
+2017-09-28 02:33:53.779 [  5] 0 MessageInterpreter:receive:messageId=854fa04e-0eba-4741-b442-480e88dd9622:No dialogRequestId attached to message.
+2017-09-28 02:33:53.779 [  5] I DirectiveSequencer:onDirective:directive={"namespace\:"SpeechRecognizer"\,name\:"StopCapture"\,messageId\:"854fa04e-0eba-4741-b442-480e88dd9622"\,dialogRequestId\:""}
+2017-09-28 02:33:53.779 [  b] I DirectiveRouter:preHandleDirective:messageId=854fa04e-0eba-4741-b442-480e88dd9622,action=calling
+2017-09-28 02:33:53.779 [  b] 0 CapabilityAgent:addingMessageIdToMap:messageId=854fa04e-0eba-4741-b442-480e88dd9622
+2017-09-28 02:33:53.779 [  c] I DirectiveRouter:handleDirective:messageId=854fa04e-0eba-4741-b442-480e88dd9622,action=calling
+2017-09-28 02:33:53.779 [  9] 0 AudioInputProcessor:stopCapture:stopImmediately=true
+2017-09-28 02:33:53.779 [  9] 0 AudioInputProcessor:setState:from=RECOGNIZING,to=BUSY
+2017-09-28 02:33:53.779 [  9] 0 DirectiveProcessor:onHandlingCompeted:messageId=854fa04e-0eba-4741-b442-480e88dd9622,directiveBeingPreHandled=(nullptr)
+2017-09-28 02:33:53.779 [  9] 0 CapabilityAgent:removingMessageIdFromMap:messageId=854fa04e-0eba-4741-b442-480e88dd9622
+2017-09-28 02:33:53.779 [  a] 0 DialogUXStateAggregator:setState:from=LISTENING,to=THINKING
+###########################
+#       Thinking...       #
+###########################
+[New Thread 0x7fff93131700 (LWP 29780)]
+2017-09-28 02:33:53.789 [  4] I InProcessAttachmentReader:readFailed:reason=SDS is closed
+2017-09-28 02:33:54.551 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-13
+2017-09-28 02:33:54.646 [  5] I DirectiveSequencer:onDirective:directive={"namespace\:"Speaker"\,name\:"SetMute"\,messageId\:"458aca8d-8929-42c8-85fc-55ffb0bb0899"\,dialogRequestId\:"17f1b945-d38e-4a88-a3bd-d684ed9e4176"}
+2017-09-28 02:33:54.646 [  b] W DirectiveRouter:preHandleDirectiveFailed:messageId=458aca8d-8929-42c8-85fc-55ffb0bb0899,reason=noHandlerRegistered
+2017-09-28 02:33:54.646 [  b] I DirectiveSequencer:sendingExceptionEncountered:messageId=458aca8d-8929-42c8-85fc-55ffb0bb0899
+2017-09-28 02:33:54.646 [  5] I DirectiveSequencer:onDirective:directive={"namespace\:"SpeechSynthesizer"\,name\:"Speak"\,messageId\:"18101643-971b-4ac9-96ce-80489dccd2ac"\,dialogRequestId\:"17f1b945-d38e-4a88-a3bd-d684ed9e4176"}
+2017-09-28 02:33:54.646 [  b] 0 EventBuilder:buildJsonEventString:messageId=a9bd006a-5f2d-4b34-87db-f977a4f59060,namespace=System,name=ExceptionEncountered
+[Thread 0x7fff93131700 (LWP 29780) exited]
+2017-09-28 02:33:54.647 [  b] I DirectiveRouter:preHandleDirective:messageId=18101643-971b-4ac9-96ce-80489dccd2ac,action=calling
+2017-09-28 02:33:54.647 [  b] 0 CapabilityAgent:addingMessageIdToMap:messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:54.647 [  b] 9 SpeechSynthesizer:preHandleDirective:messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:54.647 [  7] 0 SpeechSynthesizer:executePreHandle:messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:54.647 [  c] I DirectiveRouter:handleDirective:messageId=18101643-971b-4ac9-96ce-80489dccd2ac,action=calling
+2017-09-28 02:33:54.647 [  c] 9 SpeechSynthesizer:handleDirective:messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:54.647 [  7] 0 SpeechSynthesizer:executeHandle:messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:54.647 [  d] 0 SpeechSynthesizer:onFocusChanged:newFocus=FOREGROUND
+2017-09-28 02:33:54.647 [  9] 0 AudioInputProcessor:executeOnFocusChanged:newFocus=NONE
+2017-09-28 02:33:54.647 [  9] 0 AudioInputProcessor:executeOnFocusChanged:reason=Lost focus
+2017-09-28 02:33:54.647 [  9] 0 AudioInputProcessor:setState:from=BUSY,to=IDLE
+[New Thread 0x7fff93131700 (LWP 29781)]
+2017-09-28 02:33:54.647 [  7] 0 SpeechSynthesizer:executeStateChange:newState=PLAYING
+2017-09-28 02:33:54.649 [  7] 9 SpeechSynthesizer:startPlaying
+2017-09-28 02:33:54.649 [  7] 9 MediaPlayer:setSourceCalled:sourceType=AttachmentReader
+[Thread 0x7fff93131700 (LWP 29781) exited]
+2017-09-28 02:33:54.649 [  2] 0 MediaPlayer:handleSetSourceCalled
+2017-09-28 02:33:54.649 [  2] 9 MediaPlayer:tearDownPipeline
+[New Thread 0x7fff93131700 (LWP 29782)]
+2017-09-28 02:33:54.650 [  7] 9 MediaPlayer:playCalled
+2017-09-28 02:33:54.650 [  2] 0 MediaPlayer:handlePlayCalled
+2017-09-28 02:33:54.650 [  2] 0 MediaPlayer:doStopSuccess:reason=alreadyStopped
+2017-09-28 02:33:54.650 [  2] 9 MediaPlayer:doStopSuccess
+2017-09-28 02:33:54.650 [  2] 0 MediaPlayer:handlePlay:supportsBuffering=0
+[New Thread 0x7fff90b58700 (LWP 29783)]
+2017-09-28 02:33:54.654 [  2] 0 MediaPlayer:handlePlay:stateReturn=ASYNC
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:State Change:oldState=NULL,newState=READY,pendingState=PLAYING
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=stream-status
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.654 [  2] 9 MediaPlayer:messageReceived:messageType=stream-status
+2017-09-28 02:33:54.654 [ 10] 9 BaseStreamSource:onNeedDataCalled:size=4096
+2017-09-28 02:33:54.654 [  2] 9 BaseStreamSource:handleNeedDataCalled
+2017-09-28 02:33:54.654 [  2] 9 BaseStreamSource:installOnReadDataHandler:action=newSourceId,sourceId=16
+2017-09-28 02:33:54.654 [  2] 9 AttachmentReaderSource:read:size=4096,status=0
+2017-09-28 02:33:54.654 [  2] 9 AttachmentReaderSource:read:size=4096,status=0
+2017-09-28 02:33:54.656 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.656 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.656 [  2] 9 AttachmentReaderSource:read:size=3805,status=0
+2017-09-28 02:33:54.656 [  2] I InProcessAttachmentReader:readFailed:reason=SDS is closed
+2017-09-28 02:33:54.656 [  2] 9 AttachmentReaderSource:read:size=0,status=3
+2017-09-28 02:33:54.656 [  2] 9 BaseStreamSource:signalEndOfDataCalled
+2017-09-28 02:33:54.656 [  2] 9 BaseStreamSource:clearOnReadDataHandlerCalled:sourceId=16
+2017-09-28 02:33:54.656 [ 10] 9 BaseStreamSource:onNeedDataCalled:size=4096
+2017-09-28 02:33:54.657 [ 10] 9 MediaPlayer:onPadAddedCalled
+2017-09-28 02:33:54.657 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.657 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.657 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.657 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.657 [  2] 9 BaseStreamSource:handleNeedDataCalled
+2017-09-28 02:33:54.657 [  2] 9 MediaPlayer:handlePadAddedSignalCalled
+2017-09-28 02:33:54.661 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:54.662 [  2] 9 MediaPlayer:messageReceived:messageType=stream-start
+2017-09-28 02:33:54.746 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-15
+2017-09-28 02:33:54.747 [  4] 0 CurlEasyHandleWrapper:reset:responseCode=HTTP_RESPONSE_SUCCESS_NO_CONTENT
+2017-09-28 02:33:55.662 [  f] I AbstractKeywordDetector:readFromStreamFailed:reason=readerTimeOut
+2017-09-28 02:33:56.662 [  f] I AbstractKeywordDetector:readFromStreamFailed:reason=readerTimeOut
+2017-09-28 02:33:56.664 [  d] E SpeechSynthesizer:onFocusChangeFailed:reason=stateChangeTimeout,messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:56.664 [  d] 0 EventBuilder:buildJsonEventString:messageId=e9272c31-ffa0-4df0-88af-2422d47e7225,namespace=System,name=ExceptionEncountered
+2017-09-28 02:33:56.665 [  a] 0 DialogUXStateAggregator:transitionFromThinkingTimedOut
+[Thread 0x7fff93131700 (LWP 29782) exited]
+2017-09-28 02:33:56.665 [  a] 0 DialogUXStateAggregator:setState:from=THINKING,to=IDLE
+########################################
+#       Alexa is currently idle!       #
+########################################
+2017-09-28 02:33:56.664 [  d] 0 DirectiveProcessor:onHandlingFailed:messageId=18101643-971b-4ac9-96ce-80489dccd2ac,directiveBeingPreHandled=(nullptr),description=stateChangeTimeout
+2017-09-28 02:33:56.670 [  d] 0 DirectiveProcessor:scrubDialogRequestIdLocked:dialogRequestId=17f1b945-d38e-4a88-a3bd-d684ed9e4176
+2017-09-28 02:33:56.670 [  d] 0 CapabilityAgent:removingMessageIdFromMap:messageId=18101643-971b-4ac9-96ce-80489dccd2ac
+2017-09-28 02:33:56.704 [  2] 9 MediaPlayer:messageReceived:messageType=latency
+[New Thread 0x7fff93131700 (LWP 29790)]
+2017-09-28 02:33:56.704 [  2] 9 MediaPlayer:messageReceived:messageType=tag
+2017-09-28 02:33:56.704 [  2] 9 MediaPlayer:messageReceived:messageType=tag
+2017-09-28 02:33:56.704 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.704 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.704 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:State Change:oldState=READY,newState=PAUSED,pendingState=PLAYING
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:messageReceived:messageType=async-done
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:messageReceived:messageType=new-clock
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.705 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:messageReceived:messageType=state-changed
+2017-09-28 02:33:56.706 [  2] 9 MediaPlayer:State Change:oldState=PAUSED,newState=PLAYING,pendingState=VOID_PENDING
+2017-09-28 02:33:56.706 [  2] 0 MediaPlayer:callingOnPlaybackStarted
+2017-09-28 02:33:56.706 [  2] 9 SpeechSynthesizer:onPlaybackStarted
+2017-09-28 02:33:56.706 [  7] 0 SpeechSynthesizer:executePlaybackStarted
+2017-09-28 02:33:56.706 [  7] 0 SpeechSynthesizer:executeProvideState:stateRequestToken=0
+2017-09-28 02:33:56.706 [  7] 9 MediaPlayer:getOffsetInMillisecondsCalled
+2017-09-28 02:33:56.707 [  2] 0 MediaPlayer:handleGetOffsetInMillisecondsCalled
+2017-09-28 02:33:56.707 [  7] 0 ContextManager:updateStateLocked:action=updatedState,state={"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"PLAYING"},namespace=SpeechSynthesizer,name=SpeechState
+2017-09-28 02:33:56.707 [  7] 0 EventBuilder:buildJsonEventString:messageId=14b1d930-3f6c-4712-b71c-8a1d6b926405,namespace=SpeechSynthesizer,name=SpeechStarted
+2017-09-28 02:33:56.707 [  a] 0 DialogUXStateAggregator:setState:from=IDLE,to=SPEAKING
+###########################
+#       Speaking...       #
+###########################
+2017-09-28 02:33:56.718 [  2] 9 MediaPlayer:messageReceived:messageType=tag
+2017-09-28 02:33:57.008 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-17
+2017-09-28 02:33:57.008 [  4] 0 CurlEasyHandleWrapper:reset:responseCode=HTTP_RESPONSE_SUCCESS_NO_CONTENT
+2017-09-28 02:33:57.170 [  4] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 0ed1d7fffe92a6c8-00002e0a-0004d5f0-5a244828276eaa02-78d80c5e-19
+2017-09-28 02:33:58.467 [ 10] 9 BaseStreamSource:onNeedDataCalled:size=4096
+2017-09-28 02:33:58.467 [  2] 9 BaseStreamSource:handleNeedDataCalled
+2017-09-28 02:33:58.622 [  2] 9 MediaPlayer:messageReceived:messageType=eos
+2017-09-28 02:33:58.622 [  2] 9 BaseStreamSource:~BaseStreamSource
+2017-09-28 02:33:58.622 [  2] 0 MediaPlayer:callingOnPlaybackFinished
+2017-09-28 02:33:58.622 [  2] 9 SpeechSynthesizer:onPlaybackFinished
+2017-09-28 02:33:58.622 [  2] 9 MediaPlayer:tearDownPipeline
+2017-09-28 02:33:58.622 [  7] 0 SpeechSynthesizer:executePlaybackFinished
+2017-09-28 02:33:58.622 [  7] 0 SpeechSynthesizer:executeProvideState:stateRequestToken=0
+2017-09-28 02:33:58.622 [  7] 0 ContextManager:updateStateLocked:action=updatedState,state={"token"\:""\,"offsetInMilliseconds"\:0\,"playerActivity"\:"FINISHED"},namespace=SpeechSynthesizer,name=SpeechState
+2017-09-28 02:33:58.622 [  7] 9 SpeechSynthesizer:releaseForegroundFocus
+2017-09-28 02:33:58.622 [  d] 0 SpeechSynthesizer:onFocusChanged:newFocus=NONE
+[New Thread 0x7fff97933700 (LWP 29794)]
+[Thread 0x7fff90b58700 (LWP 29783) exited]
+2017-09-28 02:33:58.627 [  2] 9 MediaPlayer:doStopSuccess
+2017-09-28 02:33:58.627 [  2] 9 MediaPlayer:resetPipeline
+2017-09-28 02:33:58.824 [  a] 0 DialogUXStateAggregator:setState:from=FINISHED,to=IDLE
+[Thread 0x7fff97933700 (LWP 29794) exited]
+########################################
+#       Alexa is currently idle!       #
+########################################
+[Thread 0x7fffa19bb700 (LWP 29741) exited]
+^C
+Thread 1 "SampleApp" received signal SIGINT, Interrupt.
+0x00007ffff588824d in read () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 29641] will be killed.
+
